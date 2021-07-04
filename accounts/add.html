@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Adding an Account - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Adding an Account";
+    var mkdocs_page_input_path = "accounts/add.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="add.html">Adding an Account</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#account-type">Account Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#incoming-server-settings">Incoming Server Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuring-the-outgoing-server">Configuring the outgoing server</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#account-options">Account options</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#last-step">Last step</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="view.html">Managing / Viewing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="provider_settings.html">Common Provider Settings</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/reading.html">Reading mail</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/global.html">Global settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/account.html">Account settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Accounts &raquo;</li>
+        
+      
+    
+    <li>Adding an Account</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="add-an-account">Add an Account</h1>
+<p>The account set-up wizard will launch automatically after the <a href="../setup/welcome.html">Welcome Screen</a>. </p>
+<p>For any additional accounts they can be added by going to the accounts menu, 
+and then tapping the 'Add account' option in the overflow menu.</p>
+<p>First you are asked for your email address and password.</p>
+<p>The buttons "Manual setup" and "Next" become only activated after a correctly formatted email address and a password
+have been typed in.</p>
+<p><img alt="Screen to enter email address and password" src="img/account_setup_step1_empty.png" /> <img alt="Email address and password filled in" src="img/account_setup_step1_filled_in.png" /></p>
+<p>If you choose "Next" and the domain part of your email address is known to K-9 Mail, the connection settings for the 
+incoming and outgoing server are automatically set up for you. This is the case for some large email providers, 
+e.g. Gmail, Yahoo!, and AOL.</p>
+<p>We also <a href="provider_settings.html">list information on the settings for major e-mail providers</a>.</p>
+<h2 id="account-type">Account Type</h2>
+<p>If you need to configure it manually, you will need to first choose an account type. The available options are POP3, 
+IMAP, and WebDAV (supported by Exchange versions up to 2007).</p>
+<p>All of these are names of protocols to access your mailbox. If your email provider supports it, we strongly recommend 
+you use IMAP. It is superior to the others and well supported by K-9 Mail.</p>
+<p>For more information see the linked Wikipedia entries:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/IMAP">IMAP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/POP3">POP3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebDAV">WebDAV</a></li>
+</ul>
+<p><img alt="Account type selection" src="img/account_setup_step2_account_type_selection.png" /></p>
+<h2 id="incoming-server-settings">Incoming Server Settings</h2>
+<p>To configure your incoming server settings see the corresponding page</p>
+<ul>
+<li><a href="incoming_imap.html">IMAP</a></li>
+<li><a href="incoming_pop3.html">POP3</a></li>
+<li><a href="incoming_webdav.html">WebDAV</a></li>
+</ul>
+<h2 id="configuring-the-outgoing-server">Configuring the outgoing server</h2>
+<p>To be able to send mail K-9 Mail needs to know the settings to your provider's 
+<a href="https://en.wikipedia.org/wiki/SMTP">SMTP</a> server. In this step of the account creation process you have to provide 
+those details. Below is an explanation of the different settings. In certain circumstances, you may need to use a 
+different outgoing server than you'd expect; we'll discuss those later.</p>
+<p>Because of the nature of email service, you often (if not always, these days) send outgoing mail to one server, but 
+pick up incoming mail from a separate one; this is why many of the items below say "this is often, but not always, the
+ same as the setting for incoming mail".</p>
+<p><img alt="Outgoing server settings" src="img/account_setup_step4_smtp_outgoing_server.png" /></p>
+<p><strong>SMTP server</strong>: This is the hostname or IP address of your SMTP server. As discussed above under <strong>IMAP Server</strong>, this
+name or IP must be accessible from any network from which you may want to send mail, whether your cellular carrier's
+WAN or a private LAN via Wi-Fi. See below for more details if you have trouble.</p>
+<p><strong>Security type</strong>: This specifies the cryptographic protocol that should be used when connecting to your SMTP server. 
+Available options are:</p>
+<ul>
+<li>None: This doesn't use any transport security at all.</li>
+<li>SSL/TLS (if available): SSL/TLS is used but the certificate isn't checked.</li>
+<li><strong>SSL/TLS (always)</strong>: SSL/TLS is used and it's checked if the certificate is valid.</li>
+<li>STARTTLS (if available): The STARTTLS method is used if available; the certificate isn't checked. If STARTTLS is not
+available, no encryption is used at all.</li>
+<li><strong>STARTTLS (always)</strong>: The STARTTLS method is used and the certificate is checked for validity.</li>
+</ul>
+<p><strong>Port</strong>: The port number your provider's SMTP is listening on. This may be <em>465</em> or <em>587</em>, and in rare cases <em>25</em>, 
+depending on the configuration and transport security settings of your server and K-9.</p>
+<p><strong>Require sign-in</strong>: Tells K-9 Mail whether or not it will be expected to authenticate to the server. In almost all 
+cases this needs to remain checked.</p>
+<p><strong>Authentication type</strong>: This specifies which authentication method to use. Available options are:</p>
+<ul>
+<li><strong>AUTOMATIC</strong>: This is the default method that will automatically detect which authentication methods are supported. 
+You shouldn't need to change this.</li>
+<li><strong>LOGIN</strong>: This uses the LOGIN authentication method.</li>
+<li><strong>PLAIN</strong>: This uses the PLAIN authentication method.</li>
+<li><strong>CRAM_MD5</strong>: Use this if your server doesn't support transport security but supports the CRAM_MD5 authentication 
+method.</li>
+</ul>
+<p><strong>Username</strong>: The username that's needed to authenticate to the SMTP server. This is usually equal to either the 
+left-hand side of, or the entire, email address; your mail server operator should have told you what to use as an 
+Outgoing username -- and it will commonly be identical to the incoming username, though not always.</p>
+<p><strong>Password</strong>: The password that's needed to authenticate to the SMTP server. This is often, though not always, identical
+to the password for the incoming server.</p>
+<p>To complete the outgoing server configuration click "Next". And again, K-9 Mail tries to connect to the server to verify
+the settings you just entered.</p>
+<p><img alt="Checking outgoing server settings" src="img/account_setup_step4.5_smtp_checking_outgoing_server_settings.png" /></p>
+<h2 id="account-options">Account options</h2>
+<p>After successfully setting up the incoming and outgoing servers, you can now configure some basic settings on how often
+K-9 Mail checks for new messages, if you want to be notified of new mail, etc. These settings are specific to each 
+account/mailbox you configure; you can set them differently for different mailboxes.</p>
+<p><img alt="Account options" src="img/account_setup_step5_account_options.png" /></p>
+<p><strong>Folder poll frequency</strong>: Here you specify in what interval K-9 Mail should check the incoming server to see if there 
+are new messages. Available options are:</p>
+<ul>
+<li>Never</li>
+<li>Every minute</li>
+<li>Every 5 minutes</li>
+<li>Every 10 minutes</li>
+<li>Every 15 minutes</li>
+<li>Every 30 minutes</li>
+<li>Every hour</li>
+<li>Every 2 hours</li>
+<li>Every 3 hours</li>
+<li>Every 6 hours</li>
+<li>Every 12 hours</li>
+<li>Every 24 hours</li>
+</ul>
+<p><strong>Enable push mail for this account</strong>: This option is only available for IMAP accounts. When it is enabled a long-lived
+connection to the IMAP server is established so K-9 Mail can be notified by the server when a new message has arrived.
+When this is set, you do not need to select a poll frequency, because you do not poll.</p>
+<p>This decreases delivery notification delay and thus for some it is worth choosing a mailbox based on the provider 
+support for IMAP IDLE. Note that it may require multiple connections which might not be supported or undesired by the
+server administration.</p>
+<p><strong>Number of messages to display</strong>: This value determines how many messages are kept locally cached and displayed. 
+Available options are:</p>
+<ul>
+<li>25 messages</li>
+<li>50 messages</li>
+<li>100 messages</li>
+<li>250 messages</li>
+<li>500 messages</li>
+<li>1000 messages</li>
+<li>all messages</li>
+</ul>
+<p>Higher values have some performance implications. See <a href="../settings/account.html#local-folder-size"><em>Local folder size</em></a> 
+for more information.</p>
+<p><strong>Notify me when mail arrives</strong>: If this is checked you are notified when a new message was downloaded in this mailbox.
+Notification type (LED, vibration) and ringtone can be configured later. See 
+<a href="../settings/account.html#notifications"><em>Notifications</em></a> for more information.</p>
+<p><strong>Notify me while mail is being checked</strong>: If this option is enabled K-9 Mail will inform the user when an account is 
+being synchronized by displaying a message in the Android title bar.</p>
+<h2 id="last-step">Last step</h2>
+<p>To complete the account creation you have to fill out the following two fields:</p>
+<p><img alt="Screen to enter account name and your display name" src="img/account_setup_step6_account_name.png" /></p>
+<p><strong>Give this account a name</strong> (optional): This is the name of the account that will be displayed in the account list. If
+you leave this field empty the email address associated with this account will be used.</p>
+<p><strong>Type your name</strong>: This will be used as your name for messages sent using this account.</p>
+<p>Once you've done this, click "Done", and the account will be completely set up.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="incoming_imap.html" class="btn btn-neutral float-right" title="IMAP Server Settings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../setup/permissions.html" class="btn btn-neutral" title="App permissions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup/permissions.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="incoming_imap.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

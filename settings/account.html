@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Account settings - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Account settings";
+    var mkdocs_page_input_path = "settings/account.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/add.html">Adding an Account</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/view.html">Managing / Viewing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/provider_settings.html">Common Provider Settings</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/reading.html">Reading mail</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="global.html">Global settings</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="account.html">Account settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-settings">General Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#account-name">Account name</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#default-account">Default account</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#account-color">Account color</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reading-mail">Reading mail</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#always-show-images">Always show images</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mark-as-read-when-opened">Mark as read when opened</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fetching-mail">Fetching mail</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#local-folder-size">Local folder size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sync-messages-from">Sync messages from</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fetch-messages-up-to">Fetch messages up to</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folder-poll-frequency">Folder poll frequency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#poll-folders">Poll folders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#push-folders">Push folders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sync-server-deletions">Sync server deletions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-i-delete-a-message">When I delete a message</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#erase-deleted-messages-on-server">Erase deleted messages on server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incoming-server">Incoming server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced">Advanced</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#poll-when-connecting-for-push">Poll when connecting for push</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#max-folders-to-check-with-push">Max folders to check with push</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#refresh-idle-connection">Refresh IDLE connection</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sending-mail">Sending mail</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#composition-defaults">Composition defaults</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#your-name">Your name</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#your-email-address">Your email address</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bcc-all-messages-to">Bcc all messages to</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#use-signature">Use signature</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#signature">Signature</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#signature-position">Signature position</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#manage-identities">Manage identities</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#add-an-identity">Add an identity</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-an-identity">Delete an identity</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-default-identity">Set default identity</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#message-format">Message Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#always-show-ccbcc">Always show Cc/Bcc</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#read-receipt">Read receipt</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reply-quoting-style">Reply quoting style</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quote-message-when-replying">Quote message when replying</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#strip-signatures-on-reply">Strip signatures on reply</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#outgoing-server">Outgoing server</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#folders">Folders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-expand-folder">Auto-expand folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folders-to-display">Folders to display</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#movecopy-destination-folders">Move/copy destination folders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folders-to-search">Folders to search</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#archive-folder">Archive folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drafts-folder">Drafts folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sent-folder">Sent folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spam-folder">Spam folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trash-folder">Trash folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#storage">Storage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#storage-location">Storage location</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notifications">Notifications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#new-mail-notifications">New mail notifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#include-outgoing-mail">Include outgoing mail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-mail-ringtone">New mail ringtone</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vibrate">Vibrate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vibrate-patterns">Vibrate patterns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#repeat-vibration">Repeat vibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blink-led">Blink LED</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notification-led-color">Notification LED color</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sync-notifications">Sync notifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notification-opens-unread-messages">Notification opens unread messages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#search">Search</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#enable-server-search">Enable server search</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-search-limit">Server search limit</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cryptography">Cryptography</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#openpgp-provider">OpenPGP Provider</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-sign">Auto-sign</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-encrypt">Auto-encrypt</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Settings &raquo;</li>
+        
+      
+    
+    <li>Account settings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="account-settings">Account Settings</h1>
+<p>Many of the settings in K-9 Mail can be customized for each account, and are therefore located under <em>Account Settings</em>.
+To open them:</p>
+<ul>
+<li>If you're in the account list view, long-tap the account you want to configure, then select <em>Account settings</em>.</li>
+<li>If you're in a folder list or message list, open the menu, select <em>Settings</em>, then <em>Account settings</em> to get to the 
+settings for the current account.</li>
+</ul>
+<h2 id="general-settings">General Settings</h2>
+<h3 id="account-name">Account name</h3>
+<p>Here you can specify the name of the account that is displayed in the account list screen.</p>
+<h3 id="default-account">Default account</h3>
+<p>Check this setting to make this the default account. It will be used whenever you send a message and don't specify an 
+account, e.g. when taping the <em>Compose</em> icon in the account list screen or sending a message from another app.</p>
+<h3 id="account-color">Account color</h3>
+<p>Here you can select the color that is used to indicate that a particular message or folder is belonging to the selected 
+account.</p>
+<h2 id="reading-mail">Reading mail</h2>
+<h3 id="always-show-images">Always show images</h3>
+<p>This setting allows you to control when images are automatically downloaded and displayed in the message view and when 
+you have to press the <em>Show pictures</em> button first.</p>
+<p>Available options:</p>
+<ul>
+<li>No (Always display the <em>Show pictures</em> button)</li>
+<li>From contacts (when the sender is in your Contacts)</li>
+<li>From anyone (Never display the <em>Show pictures</em> button)</li>
+</ul>
+<h3 id="mark-as-read-when-opened">Mark as read when opened</h3>
+<p>Uncheck this to not mark messages as read when you open them. </p>
+<p>Independent of what you select here, you can always select <em>Mark as read</em> or <em>Mark unread</em> from the menu when viewing a 
+message.</p>
+<h2 id="fetching-mail">Fetching mail</h2>
+<p>These settings control how and when mail is fetched for this account.</p>
+<h3 id="local-folder-size">Local folder size</h3>
+<p>Specify the number of messages that will be downloaded for a folder. When new messages are downloaded older messages 
+will be deleted from the device (but not from the server).</p>
+<p>This is no hard limit and you can download more messages by pressing <em>Load up to XX more</em> at the end of the message list.</p>
+<h3 id="sync-messages-from">Sync messages from</h3>
+<p>If you set this to anything other than <em>any time (no limit)</em> K-9 Mail will only download messages that are younger than 
+a certain time span. During synchronization K-9 Mail will remove previously downloaded messages that fall outside that 
+range from the device (but not the server).</p>
+<p><strong>Note:</strong> Currently, pressing <em>Load up to XX more</em> in the message list doesn't override this setting. That means you 
+won't be able to manually fetch messages older than specified here.</p>
+<p><strong>Note:</strong> This setting is only available for IMAP accounts.</p>
+<h3 id="fetch-messages-up-to">Fetch messages up to</h3>
+<p>Set a limit on how much of a message is downloaded during synchronization. When viewing messages larger than this value 
+you will see a button saying <em>Download complete message</em> that allows you to download the rest of the message.</p>
+<h3 id="folder-poll-frequency">Folder poll frequency</h3>
+<p>Control the poll frequency from never up to 24 hours.</p>
+<h3 id="poll-folders">Poll folders</h3>
+<p>Control whether to poll all, 1st Class, 2nd Class or no folders at all.</p>
+<p>To learn more about this, read the page <a href="folders.html">Folders</a>.</p>
+<h3 id="push-folders">Push folders</h3>
+<p>Control whether to push all, 1st class, 2nd class or no folders.</p>
+<p>To learn more about this, read the page <a href="folders.html">Folders</a>.</p>
+<p><strong>Note:</strong> This setting is only available for IMAP accounts, because it's the only account type that supports Push.</p>
+<h3 id="sync-server-deletions">Sync server deletions</h3>
+<p>By default K-9 Mail removes downloaded messages from the device if the message has been deleted from the server. If you 
+uncheck this setting K-9 Mail will keep the downloaded messages.</p>
+<h3 id="when-i-delete-a-message">When I delete a message</h3>
+<p>You can control what happens when you delete a message using K-9 Mail.</p>
+<p>The following options are available:</p>
+<ul>
+<li>Do not delete on server (only from the device)</li>
+<li>Delete from server</li>
+<li>Mark as read on server (not available for POP3 accounts)</li>
+</ul>
+<h3 id="erase-deleted-messages-on-server">Erase deleted messages on server</h3>
+<p>Normally, messages on the server are simply marked for deletion. Here you can control when they are actually deleted 
+(expunged).</p>
+<p>Available options:</p>
+<ul>
+<li>Immediately</li>
+<li>When polling</li>
+<li>Manually</li>
+</ul>
+<p><strong>Note:</strong> Some clients can display messages that are marked for deletion and allow you to remove that flag, undeleting 
+them. K-9 Mail currently doesn't support that functionality.</p>
+<p><strong>Note:</strong> This setting is only available for IMAP accounts.</p>
+<h3 id="incoming-server">Incoming server</h3>
+<p>Please see <a href="../accounts/add.html#incoming-server-settings">Incoming Server Settings</a> for the available settings.</p>
+<h3 id="advanced">Advanced</h3>
+<p>K-9 Mail supports some advanced settings for IMAP accounts. If you're not familiar with the details of the IMAP 
+protocol you shouldn't change any of these settings. </p>
+<h4 id="poll-when-connecting-for-push">Poll when connecting for push</h4>
+<p>When this is enabled K-9 Mail will do a full folder synchronization after establishing a Push connection. Otherwise it 
+will only download new messages.</p>
+<h4 id="max-folders-to-check-with-push">Max folders to check with push</h4>
+<p>K-9 Mail needs to establish one connection for each folder that is checked via Push. This can quickly add up and exceed 
+the number of concurrent connections your mail server allows you to establish.
+This setting is intended as safety mechanism to limit the number of Push connections regardless of how many folders are 
+configured to be checked via Push.</p>
+<h4 id="refresh-idle-connection">Refresh IDLE connection</h4>
+<h2 id="sending-mail">Sending mail</h2>
+<p>These settings control everything related to sending mail.</p>
+<h3 id="composition-defaults">Composition defaults</h3>
+<p>Here you can configure your main identity.</p>
+<h4 id="your-name">Your name</h4>
+<p>This is the name that will be used in outgoing messages.</p>
+<h4 id="your-email-address">Your email address</h4>
+<p>This is the email address that will be used as the sending address for outgoing messages.</p>
+<h4 id="bcc-all-messages-to">Bcc all messages to</h4>
+<p>Here you enter an email address that will receive a copy of all messages you send.</p>
+<h4 id="use-signature">Use signature</h4>
+<p>Enable this to add a signature to all your messages.</p>
+<h4 id="signature">Signature</h4>
+<p>Enter the signature text here.</p>
+<p><strong>Note:</strong> You should start the signature with "-- " (dash, dash, space) on its own line. Most email clients will 
+recognize this as start of the signature and e.g. allow stripping the signature when quoting messages in replies.</p>
+<h4 id="signature-position">Signature position</h4>
+<p>Here you can specify where your signature should appear when replying to a message.</p>
+<p>Available options are:</p>
+<ul>
+<li>Before quoted text (your text, your signature, quoted text)</li>
+<li>After quoted text (your text, quoted text, your signature)</li>
+</ul>
+<p><strong>Note:</strong> This setting will be ignored if you check the setting <em>Reply after quoted text</em>.</p>
+<h3 id="manage-identities">Manage identities</h3>
+<p>Here you can set up alternative identities consisting of name, email address, <em>Reply-to</em> address, and signature.</p>
+<h4 id="add-an-identity">Add an identity</h4>
+<p>Select <em>New identity</em> from the menu to create a new identity.</p>
+<h4 id="delete-an-identity">Delete an identity</h4>
+<p>Long-press the name of an identity in the list of identities, then select <em>Remove</em>.</p>
+<h4 id="set-default-identity">Set default identity</h4>
+<p>Long-press the name of an identity in the list of identities to open a menu that allows you to change the order of 
+identities (<em>Move up</em>, <em>Move down</em>, <em>Move to top / make default</em>). The top-most identity is the default identity that 
+will be used when composing a message from this account.</p>
+<h3 id="message-format">Message Format</h3>
+<p>Here you can configure the message format that is used for outgoing messages.</p>
+<p>The following options are available:</p>
+<ul>
+<li>Plain text (you will lose all formatting and inline images of the original message when forwarding/replying to a 
+  message; this will only send text/plain parts)</li>
+<li>HTML (keeps images and formatting; will additionally include a text/plain part)</li>
+<li>Automatic (same as <em>Plain text</em> when composing new messages; same as <em>HTML</em> when replying or forwarding messages)</li>
+</ul>
+<h3 id="always-show-ccbcc">Always show Cc/Bcc</h3>
+<p>Enabling this will always show the text fields to specify CC and BCC recipients in the message composition screen.</p>
+<h3 id="read-receipt">Read receipt</h3>
+<p>Checking this requests a read receipt for all outgoing messages.</p>
+<p><strong>Note:</strong> This is adding a special header asking the recipient's email client to confirm that the message was received. 
+Some clients (like K-9 Mail) do not support sending answers to this request. Others ask the user for confirmation 
+before sending an answer. So not receiving a read receipt is not a reliable indicator that a message hasn't been read.</p>
+<h3 id="reply-quoting-style">Reply quoting style</h3>
+<p>Defines your preference for the format in which the quoted text of the message you are replying to will appear from the 
+following options:</p>
+<ul>
+<li>Prefix (like Gmail, Pine) - The quoted text appears below a one line header in the format 
+  <code>Sender's Name &lt;user@domain.TLD&gt; wrote:</code>.<br />
+  With the prefix option selected 2 additional options will be available:<ul>
+<li>Reply after quoted text - When checked, the original message will appear above the reply you type into the message
+  text box.</li>
+<li>Quoted text prefix - Defines the character(s) that will precede each line of quoted text. The default is '&gt;'. </li>
+</ul>
+</li>
+<li>Header (like Outlook, Yahoo!, and Hotmail) - The quoted text appears below a header that includes the Original Sender,
+  Recipients, Time, and Subject from the original email's message header fields.</li>
+</ul>
+<h3 id="quote-message-when-replying">Quote message when replying</h3>
+<p>Uncheck this if by default you don't want to include the original message in your reply. You will still be able to 
+include the original message by clicking the <em>Quote message</em> button in the message composition screen when replying to 
+a message.</p>
+<h3 id="strip-signatures-on-reply">Strip signatures on reply</h3>
+<p>When this is checked K-9 Mail will try to detect the correspondents signature and remove it when quoting the original 
+message.</p>
+<h3 id="outgoing-server">Outgoing server</h3>
+<p>Please see <a href="../accounts/add.html#configuring-the-outgoing-server">Configuring the outgoing server</a> for the available 
+settings.</p>
+<h2 id="folders">Folders</h2>
+<h3 id="auto-expand-folder">Auto-expand folder</h3>
+<p>The folder you specify here will be opened when you click on an account in the account list. Set to <em>-NONE-</em> when 
+clicking an account should open the folder list.</p>
+<h3 id="folders-to-display">Folders to display</h3>
+<p>Here you can specify what folder classes should be displayed in the folder list. This can also be changed from the 
+<em>Show folders...</em> sub-menu in the folder list.</p>
+<p>Available options are:</p>
+<ul>
+<li>All</li>
+<li>Only 1st Class folders</li>
+<li>1st and 2nd Class folders</li>
+<li>All except 2nd Class folders</li>
+</ul>
+<p>To learn more about folder classes, read the page <a href="folders.html">Folders</a>.</p>
+<h3 id="movecopy-destination-folders">Move/copy destination folders</h3>
+<p>This setting specifies which folders are displayed when you're asked to pick a destination folder for copy and move 
+operations.</p>
+<p>Available options are:</p>
+<ul>
+<li>All</li>
+<li>Only 1st Class folders</li>
+<li>1st and 2nd Class folders</li>
+<li>All except 2nd Class folders</li>
+</ul>
+<p>To learn more about folder classes, read the page <a href="folders.html">Folders</a>.</p>
+<h3 id="folders-to-search">Folders to search</h3>
+<p>Here you specify what folders are searched when you start a search from the folder list or the account list. Searches 
+from a message list only search messages in that list.</p>
+<p>Available options are:</p>
+<ul>
+<li>All</li>
+<li>Displayable (only folders matching <em>Folders to display</em>)</li>
+<li>None</li>
+</ul>
+<h3 id="archive-folder">Archive folder</h3>
+<p>Here you can designate an archive folder. Messages will be moved there when the <em>Archive</em> action is used. 
+Selecting <em>-NONE-</em> disables the archive functionality for this account.</p>
+<p><strong>Note:</strong> This setting is not available for POP3 accounts.</p>
+<h3 id="drafts-folder">Drafts folder</h3>
+<p>This specifies which folder is used to save message drafts. Select <em>-NONE-</em> to disable saving drafts.</p>
+<p><strong>Note:</strong> This setting is not available for POP3 accounts.</p>
+<h3 id="sent-folder">Sent folder</h3>
+<p>A copy of sent messages is uploaded to this folder. Select <em>-NONE-</em> to disable this functionality. Please note that 
+your mail server might save a copy of outgoing messages regardless.</p>
+<p><strong>Note:</strong> This setting is not available for POP3 accounts.</p>
+<h3 id="spam-folder">Spam folder</h3>
+<p>Here you can designate a spam folder. Messages will be moved there when the <em>Spam</em> action is used. Selecting <em>-NONE-</em> 
+disables this functionality.</p>
+<p>Please note that K-9 Mail does not have a spam filter included. Moving messages to a special spam folder will often 
+train the spam filter on your mail server. If your server doesn't support this, you might as well disable this 
+functionality and just delete messages.</p>
+<p><strong>Note:</strong> This setting is not available for POP3 accounts.</p>
+<h3 id="trash-folder">Trash folder</h3>
+<p>Messages you delete in K-9 Mail are moved to the folder you specify here. If you select <em>-NONE-</em> K-9 Mail will delete 
+messages instead of moving them to a trash folder.</p>
+<p><strong>Note:</strong> This setting is not available for POP3 accounts.</p>
+<h2 id="storage">Storage</h2>
+<h3 id="storage-location">Storage location</h3>
+<p>This setting lets you choose whether to store email for the selected account using internal storage or external 
+storage (SD card).</p>
+<h2 id="notifications">Notifications</h2>
+<p>Here you can specify whether and how you want to be notified of certain events.</p>
+<h3 id="new-mail-notifications">New mail notifications</h3>
+<p>Enable this if you want K-9 Mail to create a notification each time a new (unread) message is downloaded.</p>
+<h3 id="include-outgoing-mail">Include outgoing mail</h3>
+<p>If this is unchecked K-9 Mail will not create notifications for downloaded messages that were sent by an address from 
+one of your configured identities.</p>
+<h3 id="new-mail-ringtone">New mail ringtone</h3>
+<p>Specify the ringtone for the notification.</p>
+<h3 id="vibrate">Vibrate</h3>
+<p>Check this to enable vibration when new mail arrives.</p>
+<p><strong>Note:</strong> Even with this setting unchecked a notification can cause a vibration when you configured a ringtone and 
+your device is switched to vibrate. This is controlled by Android, not K-9 Mail.</p>
+<h3 id="vibrate-patterns">Vibrate patterns</h3>
+<p>Here you can select a vibration pattern for notifications.</p>
+<p>Available options:</p>
+<ul>
+<li>default (300ms off, 200ms on)</li>
+<li>pattern 1 (100ms off, 200ms on)</li>
+<li>pattern 2 (100ms off, 500ms on)</li>
+<li>pattern 3 (200ms off, 200ms on)</li>
+<li>pattern 4 (200ms off, 500ms on)</li>
+<li>pattern 5 (500ms off, 500ms on)</li>
+</ul>
+<h3 id="repeat-vibration">Repeat vibration</h3>
+<p>This setting specifies how often the vibration pattern is repeated. Available options are 1-10.</p>
+<h3 id="blink-led">Blink LED</h3>
+<p>Check this to blink the LED when new mail arrives.</p>
+<p><strong>Note:</strong> Not all devices have a notification LED. Unfortunately, there is no way for an app to find out if that's the 
+case. So this setting is always visible, even when you can't use it.</p>
+<h3 id="notification-led-color">Notification LED color</h3>
+<p>Here you can select the color the notification LED should blink in.</p>
+<p><strong>Note:</strong> Not all devices allow you to specify arbitrary colors.</p>
+<h3 id="sync-notifications">Sync notifications</h3>
+<p>If this is checked K-9 Mail will display a notification in the status bar as long as it is checking for new mail.</p>
+<h3 id="notification-opens-unread-messages">Notification opens unread messages</h3>
+<p>When this is enabled and there is more than one new message, K-9 Mail will display a message list containing all 
+unread messages in this account (except those in the <em>Trash</em>, <em>Drafts</em>, <em>Spam</em>, <em>Outbox</em>, and <em>Sent</em> folders).</p>
+<h2 id="search">Search</h2>
+<p>In this section you can enable and configure the behavior of server-side search.</p>
+<p><strong>Note:</strong> This is only available for IMAP accounts.</p>
+<h3 id="enable-server-search">Enable server search</h3>
+<p>Enable this setting to be able to search messages on the server.</p>
+<p>Right now K-9 Mail only allows you to perform a remote search after doing a local search in a folder, i.e. starting a 
+search from the folder list or the account list won't let you search the server.</p>
+<p><strong>Note:</strong> Currently only the subject and sender of remote messages are searched.</p>
+<h3 id="server-search-limit">Server search limit</h3>
+<p>Here you can specify how many search results are downloaded.</p>
+<p>K-9 Mail will only download the headers of found messages. The message contents are only downloaded after the message 
+is opened for viewing.</p>
+<p>Available options are: 10, 25, 50, 100, 250, 500, 1000, All.</p>
+<h2 id="cryptography">Cryptography</h2>
+<p>This section allows you to select a crypto provider that allows you to encrypt/decrypt and sign/verify messages using 
+the OpenPGP standard.</p>
+<p><strong>Note:</strong> Currently only <a href="https://play.google.com/store/apps/details?id=org.thialfihar.android.apg">APG</a> (Android 
+  Privacy Guard) and <a href="https://www.openkeychain.org/">OpenKeychain</a> are supported as a crypto provider. Check the 
+  <a href="../security/pgpmime.html">PGP/MIME</a> section for details on how to use it.</p>
+<h3 id="openpgp-provider">OpenPGP Provider</h3>
+<p>This allows you to select the crypto provider to use. Right now the only options are <em>None</em>, <em>APG</em> and <em>OpenKeychain</em></p>
+<h3 id="auto-sign">Auto-sign</h3>
+<p>Enable this if you want to sign all messages sent with K-9 Mail. You will still be able to override this on a 
+case-by-case basis in the screen to compose a message.</p>
+<h3 id="auto-encrypt">Auto-encrypt</h3>
+<p>Enable this if you want to encrypt all messages sent to a contact you have a public key for. You will still be able to 
+override this on a case-by-case basis in the screen to compose a message.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="folder.html" class="btn btn-neutral float-right" title="Folder settings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="global.html" class="btn btn-neutral" title="Global settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="global.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="folder.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

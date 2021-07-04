@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Reading mail - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reading mail";
+    var mkdocs_page_input_path = "reading/reading.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/add.html">Adding an Account</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/view.html">Managing / Viewing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/provider_settings.html">Common Provider Settings</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="reading.html">Reading mail</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fetching-e-mail">Fetching E-mail</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sync-types-k-9-behavior">Sync Types &amp; K-9 Behavior</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#browsing-e-mail">Browsing E-mail</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keyboard-navigation">Keyboard Navigation</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/global.html">Global settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/account.html">Account settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Reading &raquo;</li>
+        
+      
+    
+    <li>Reading mail</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="reading-e-mail">Reading E-mail</h1>
+<h2 id="fetching-e-mail">Fetching E-mail</h2>
+<p>When you receive new mail, K-9 will retrieve it (POP) or poll for it or receive a PUSH notification about it 
+(IMAP/WebDAV).  If so configured, K-9 will use the Android system notifier facility to alert you to the new messages so 
+you can read them.</p>
+<p>K-9 will display a notifier on the window-shade for each mailbox which has new messages.  When you tap on this notifier,
+you will be taken to either the Folder List or the Unread Message List for that mailbox/account, depending on the 
+setting of Account Settings-&gt;Notifications-&gt;Notification Opens Unread for that account.  If you have not turned that 
+setting on, you can tap Inbox to be taken into it.</p>
+<h4 id="sync-types-k-9-behavior">Sync Types &amp; K-9 Behavior</h4>
+<p>There are two ways of being notified of new mail synchronized to your device, push and poll. Push means that the server
+notifies you of new email. Poll means you check the server to see if new mail exists.</p>
+<p>You can configure synchronization of each folder using Folder Classes.</p>
+<p>You can also manually synchronize an account. This performs a poll of subscribed folders.</p>
+<p>Various actions may perform a manual poll to ensure that the state is consistent before/after they perform the action.</p>
+<p>('Sync' in the app generally refers to polling.)</p>
+<h2 id="browsing-e-mail">Browsing E-mail</h2>
+<p><img alt="Folder Message List" src="img/reading_folder_view.png" /> <img alt="Message View" src="img/reading_email_view.png" /></p>
+<p>At this point, you're looking at a Message List -- a list of all (or only the unread) messages in a given folder; in 
+this case, the Inbox folder for that email account.  This list will display message titles (in <em>bold</em> if not yet read, 
+highlighted if not fully down loaded), a time or date (depending on the age of the message), and either the sender's
+email address or "real name".  It may also display a short preview of the body text of the message, a Star icon for
+flagging messages and/or a multi-select checkbox, if you've enabled those options in Global Settings-&gt;Display.</p>
+<p>At this point, you can tap on a message in the list to open it for reading, or long-press to get the message's Context
+Menu, which contains these options, on a scrolling pop-up menu with the message's title at its top:</p>
+<ul>
+<li>Select - Select the message for group moving, copying or deleting</li>
+<li>Delete - Delete the message (Move it to the Trash folder [CHECKME])</li>
+<li>Forward - Forward the message by email</li>
+<li>Reply All - Compose a reply to the sender and all other recipients</li>
+<li>Reply - Compose a reply only to the sender</li>
+<li>Send Again - Attempt to send this message again (usually used from the Sent folder)</li>
+<li>Mark as Unread - Unset the Message Read flag</li>
+<li>Add Star - Mark the message as 'special' (\Flagged in IMAP, for example)</li>
+<li>Archive - Archive the message (by moving it to the Archive folder CHECKME)</li>
+<li>Spam - Move the message to the Spam folder</li>
+<li>Move - present a list of folders in the current email account to which the message can be moved; do so if one is selected</li>
+<li>Copy - present a list of folders in the current email account to which the message can be copied; do so if one is selected</li>
+<li>Share - hand the message body off to the Android Sharing facility, so the user can share it with someone in some fashion other than an email forward</li>
+<li>More from this sender - take the user to a new Message List, showing only messages sent From the same email address as the current message</li>
+</ul>
+<h2 id="keyboard-navigation">Keyboard Navigation</h2>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Message List</th>
+<th>Message Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Del</strong></td>
+<td>delete</td>
+<td>delete</td>
+</tr>
+<tr>
+<td><strong>Volume up</strong></td>
+<td>next message¹</td>
+<td>next message¹</td>
+</tr>
+<tr>
+<td><strong>Volume down</strong></td>
+<td>prev message¹</td>
+<td>prev message¹</td>
+</tr>
+<tr>
+<td><strong>Back</strong></td>
+<td>managed back²</td>
+<td>managed back²</td>
+</tr>
+<tr>
+<td><strong>a</strong></td>
+<td>reply-all</td>
+<td>reply-all</td>
+</tr>
+<tr>
+<td><strong>c</strong></td>
+<td>compose</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>d</strong></td>
+<td>delete</td>
+<td>delete</td>
+</tr>
+<tr>
+<td><strong>f</strong></td>
+<td>forward</td>
+<td>forward</td>
+</tr>
+<tr>
+<td><strong>g</strong></td>
+<td>toggle flag</td>
+<td>toggle flag</td>
+</tr>
+<tr>
+<td><strong>h</strong></td>
+<td>show keys help</td>
+<td>show keys help</td>
+</tr>
+<tr>
+<td><strong>i</strong></td>
+<td>toggle sort order</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>j</strong></td>
+<td></td>
+<td>prev message</td>
+</tr>
+<tr>
+<td><strong>k</strong></td>
+<td></td>
+<td>next message</td>
+</tr>
+<tr>
+<td><strong>m</strong></td>
+<td>move</td>
+<td>move</td>
+</tr>
+<tr>
+<td><strong>n</strong></td>
+<td></td>
+<td>next message</td>
+</tr>
+<tr>
+<td><strong>p</strong></td>
+<td></td>
+<td>prev message</td>
+</tr>
+<tr>
+<td><strong>q</strong></td>
+<td>up-to folder list</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>r</strong></td>
+<td>reply</td>
+<td>reply</td>
+</tr>
+<tr>
+<td><strong>o</strong></td>
+<td>cycle sort key</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>s</strong></td>
+<td>toggle selected</td>
+<td>move-to-spam</td>
+</tr>
+<tr>
+<td><strong>u</strong></td>
+<td>mark as unread</td>
+<td>mark as unread</td>
+</tr>
+<tr>
+<td><strong>v</strong></td>
+<td>archive</td>
+<td>archive</td>
+</tr>
+<tr>
+<td><strong>y</strong></td>
+<td>copy</td>
+<td>copy</td>
+</tr>
+<tr>
+<td><strong>shift-z</strong></td>
+<td></td>
+<td>zoom in</td>
+</tr>
+<tr>
+<td><strong>z</strong></td>
+<td>toggle read</td>
+<td>zoom out</td>
+</tr>
+</tbody>
+</table>
+<p>¹ if manage volume keys is turned on<br />
+² if manage back button is turned on</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="notifications.html" class="btn btn-neutral float-right" title="Notifications">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../accounts/provider_settings.html" class="btn btn-neutral" title="Common Provider Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../accounts/provider_settings.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="notifications.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

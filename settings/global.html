@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Global settings - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Global settings";
+    var mkdocs_page_input_path = "settings/global.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/add.html">Adding an Account</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/view.html">Managing / Viewing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../accounts/provider_settings.html">Common Provider Settings</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/reading.html">Reading mail</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="global.html">Global settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#display">Display</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#global">Global</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#language">Language</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#theme">Theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fixed-message-theme">Fixed message theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#message-view-theme">Message view theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#composer-theme">Composer theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#font-size">Font size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#animation">Animation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#account-list">Account List</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#show-account-size">Show account size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#count-search-results">Count search results</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hide-special-accounts">Hide special accounts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folder-lists">Folder lists</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#wrap-long-folder-names">Wrap long folder names</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#message-lists">Message lists</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#preview-lines">Preview lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-stars">Show stars</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multi-select-checkboxes">Multi-select checkboxes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-correspondent-names">Show correspondent names</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#correspondent-above-subject">Correspondent above subject</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-contact-names">Show contact names</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#colorize-contacs">Colorize contacs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-contact-pictures">Show contact pictures</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#colorize-contact-pictures">Colorize contact pictures</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dim-messages-after-reading">Dim messages after reading</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#threaded-view">Threaded view</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-split-screen">Show split-screen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fixed-width-fonts">Fixed-width fonts</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#visible-message-actions">Visible message actions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#messages">Messages</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-fit-message">Auto-fit message</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interaction">Interaction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#start-in-unified-inbox">Start in Unified Inbox</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactiongestures">Interaction/Gestures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactionvolume-key-navigation">Interaction/Volume key navigation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactionreturn-to-list-after-delete">Interaction/Return to list after delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactionshow-next-message-after-delete">Interaction/Show next message after delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactionconfirm-actions">Interaction/Confirm actions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notifications">Notifications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quiet-time">Quiet Time</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quiet-time-starts">Quiet Time starts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quiet-time-ends">Quiet Time ends</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-delete-button">Show 'Delete' button</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#network">Network</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#background-sync">Background sync</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#miscellaneous">Miscellaneous</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#use-gallery-bug-work-around">Use Gallery bug work-around</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save-attachments-to">Save attachments to...</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#privacy">Privacy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hide-subject-in-notifications">Hide subject in notifications</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debugging">Debugging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#enable-debug-logging">Enable debug logging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#log-sensitive-information">Log sensitive information</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="account.html">Account settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Settings &raquo;</li>
+        
+      
+    
+    <li>Global settings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="global-settings">Global Settings</h1>
+<p><em>Global settings</em> are account-independent settings. Most of them define how the user interface should look like.</p>
+<p><img alt="Global Settings menu" src="img/settings_global.png" /></p>
+<h2 id="display">Display</h2>
+<p>The Display settings provide a lot of flexibility to control the global appearance of the app, as well as each of the 
+main views, such as the account list, message lists and message display.</p>
+<h3 id="global">Global</h3>
+<h4 id="language">Language</h4>
+<p>By default K-9 Mail will display the user interface in the language you're using for your Android system. With this 
+setting you can override the system language, e.g. if your Android version doesn't support your native language but 
+K-9 Mail does.</p>
+<h4 id="theme">Theme</h4>
+<p>Available themes:</p>
+<ul>
+<li>Light (default)</li>
+<li>Dark</li>
+</ul>
+<h4 id="fixed-message-theme">Fixed message theme</h4>
+<p>When using the dark theme messages can look wrong. This is why K-9 Mail allows you to override the app theme.</p>
+<p>Enabling this setting will always use the theme configured in <em>Message view theme</em> below for the message view.
+Not using a fixed message theme means you can select a theme in the menu of the message view.</p>
+<h4 id="message-view-theme">Message view theme</h4>
+<p>This setting specifies the theme that is used for the message view.</p>
+<p>Available settings:</p>
+<ul>
+<li>Light</li>
+<li>Dark</li>
+<li>Use app theme (default)</li>
+</ul>
+<h4 id="composer-theme">Composer theme</h4>
+<p>This setting specifies the theme that is used when composing a message.</p>
+<p>Available settings:</p>
+<ul>
+<li>Light</li>
+<li>Dark</li>
+<li>Use app theme (default)</li>
+</ul>
+<h4 id="font-size">Font size</h4>
+<p>K-9 allows you to configure the font-size for various sections of the app.</p>
+<h4 id="animation">Animation</h4>
+<p>Here you can configure whether or not K-9 Mail will use animations. Currently this is only affects the animation when 
+switching from the message list to the message view and back.</p>
+<h3 id="account-list">Account List</h3>
+<h4 id="show-account-size">Show account size</h4>
+<p>This setting controls whether or not the account size is displayed in the list of accounts. Disabling it can speed up 
+the display a bit.</p>
+<h4 id="count-search-results">Count search results</h4>
+<p>Unchecking this will disable counting the number of unread and starred messages in the special accounts 
+(<em>Unified Inbox</em> and <em>All messages</em>).</p>
+<h4 id="hide-special-accounts">Hide special accounts</h4>
+<p>Here you can disable the special accounts <em>Unified Inbox</em> and <em>All messages</em>.</p>
+<p><strong>Note:</strong> As of K-9 Mail v4.802, third-party applications can only access information about messages in the 
+<em>Unified Inbox</em>. So disabling this can lead to those apps no longer working properly.</p>
+<h3 id="folder-lists">Folder lists</h3>
+<h4 id="wrap-long-folder-names">Wrap long folder names</h4>
+<p>When this setting is enabled folder names that are longer than can be displayed in one line in the folder list will be 
+wrapped and displayed using multiple lines rather than being shortened with "..."</p>
+<h3 id="message-lists">Message lists</h3>
+<h4 id="preview-lines">Preview lines</h4>
+<p>Here you can specify how many lines of preview of a message you want to see in the message list.</p>
+<p><strong>Note:</strong> If you set preview lines to <em>0</em> and disable contact pictures (see below) you get a special single line 
+message list view.</p>
+<h4 id="show-stars">Show stars</h4>
+<p>With this you can disable the star icon that is used to indicate flagged messages.</p>
+<h4 id="multi-select-checkboxes">Multi-select checkboxes</h4>
+<p>Enable this to always show the checkboxes to select a message.</p>
+<h4 id="show-correspondent-names">Show correspondent names</h4>
+<p>Disable this to display email addresses instead of correspondent names.</p>
+<h4 id="correspondent-above-subject">Correspondent above subject</h4>
+<p>Show correspondent names above the subject line, rather than below it.</p>
+<h4 id="show-contact-names">Show contact names</h4>
+<p>Show correspondent names from Contacts when available.</p>
+<h4 id="colorize-contacs">Colorize contacs</h4>
+<p>Here you can select the color to use for correspondent names from your Contacts. All other correspondents will be 
+displayed in the default color.</p>
+<h4 id="show-contact-pictures">Show contact pictures</h4>
+<p>Disable this if you don't want to display contact pictures (or place holder images) in the message list.</p>
+<h4 id="colorize-contact-pictures">Colorize contact pictures</h4>
+<p>If this is checked the place holder images for correspondents with missing contact pictures or ones not in your 
+Contacts will be displayed in different colors.
+If this is disabled the images will be displayed with a grey background.</p>
+<h4 id="dim-messages-after-reading">Dim messages after reading</h4>
+<p>Disabling this will display read and unread messages using the same background color in the message list. Then bold 
+text in the first line is the only indicator that a message hasn't been read yet.</p>
+<h4 id="threaded-view">Threaded view</h4>
+<p>Threaded view is enabled by default and groups messages that belong to the same thread. Currently only messages in the 
+same folder are grouped. Specifically, this will not include messages sent by you if those messages are not also stored 
+in the current folder.</p>
+<p>Please note that this is not the same as the conversation view you might know from e.g. Gmail. </p>
+<p>To add own messages in threaded view: change <em>Sent folder</em> to <em>INBOX</em> in <em>Folder</em> settings under <em>Account settings</em>. </p>
+<p>Note: own messages are no longer stored (and synced) in <em>Sent</em> folder.</p>
+<h4 id="show-split-screen">Show split-screen</h4>
+<p>This setting allows you to display the message list next to the message view. This is mainly useful for devices with a 
+rather large screen, i.e. tablets.</p>
+<p>Available settings:</p>
+<ul>
+<li>Always</li>
+<li>Never</li>
+<li>When in Landscape orientation</li>
+</ul>
+<h3 id="fixed-width-fonts">Fixed-width fonts</h3>
+<p>When this is checked a fixed-width font will be used for plain text messages. The display of HTML messages is not 
+influenced by this setting.</p>
+<h4 id="visible-message-actions">Visible message actions</h4>
+<p>Configure which message actions will be promoted to the first level of the menu in the message view.</p>
+<p><strong>Note:</strong> Checking an item doesn't mean that this action will be displayed in the action bar. There is only a limited 
+number of actions that will be displayed in the action bar, the rest will move to the so called overflow menu that is 
+accessible using the icon with the three dots.</p>
+<h3 id="messages">Messages</h3>
+<h4 id="auto-fit-message">Auto-fit message</h4>
+<p>Enable this to shrink messages to fit the screen width.</p>
+<h3 id="interaction">Interaction</h3>
+<h4 id="start-in-unified-inbox">Start in Unified Inbox</h4>
+<p>When this setting is enabled K-9 Mail starts in the <em>Unified Inbox</em>.</p>
+<p><strong>Note:</strong> You shouldn't use this setting. Pressing the launcher icon when K-9 Mail has been started before will restore 
+the app to its old state rather than starting it again. Put a "K-9 Accounts" shortcut on your home screen to always 
+open the <em>Unified Inbox</em>.</p>
+<h3 id="interactiongestures">Interaction/Gestures</h3>
+<p><strong>Note:</strong> This setting isn't currently used and will be removed soon.</p>
+<h3 id="interactionvolume-key-navigation">Interaction/Volume key navigation</h3>
+<p>Here you can specify whether you want to use the hardware volume keys to move up and down in the message list, or move 
+to the previous and next message in the message view.</p>
+<h3 id="interactionreturn-to-list-after-delete">Interaction/Return to list after delete</h3>
+<p>When this setting is enabled deleting a message in the message view will return to the message list rather than moving 
+to the previous/next message.</p>
+<h3 id="interactionshow-next-message-after-delete">Interaction/Show next message after delete</h3>
+<p>Enabling this setting always moves to the next message after deleting a message from the message view. When it is 
+disabled you move to the next or previous message depending on your previous travel direction.</p>
+<h3 id="interactionconfirm-actions">Interaction/Confirm actions</h3>
+<p>Here you can specify which actions should display a confirmation dialog.</p>
+<p>You can enable confirmations for the following actions:</p>
+<ul>
+<li>Delete (in message view)</li>
+<li>Delete Starred (in message view)</li>
+<li>Delete (from notification)</li>
+<li>Spam</li>
+</ul>
+<h2 id="notifications">Notifications</h2>
+<p>Only some options relating to notifications are shown here.
+Most of the settings for notifications are under <a href="account.html#notifications">Account Settings</a>, which means you can 
+choose different notification styles for each account.</p>
+<h3 id="quiet-time">Quiet Time</h3>
+<p>You can set a <em>Quiet Time</em> to prevent notification from disturbing your sleep.</p>
+<h3 id="quiet-time-starts">Quiet Time starts</h3>
+<p>Here you can specify the time when notifications will be disabled.</p>
+<h3 id="quiet-time-ends">Quiet Time ends</h3>
+<p>This time specifies the end of the <em>Quiet Time</em>, when notifications will be enabled again.</p>
+<h3 id="show-delete-button">Show 'Delete' button</h3>
+<p>K-9 Mail supports deleting messages directly from a notification (on Android 4.1 and newer).</p>
+<p>The available settings are:</p>
+<ul>
+<li>Never (default)</li>
+<li>For single message notifications</li>
+<li>Always</li>
+</ul>
+<h2 id="network">Network</h2>
+<h3 id="background-sync">Background sync</h3>
+<p>This setting specifies when K-9 Mail is allowed to synchronize messages in the background.</p>
+<p>Available settings are:</p>
+<ul>
+<li>When 'Auto-sync' is checked (see below)</li>
+<li>Always</li>
+<li>Never (This disables mail checking for all accounts regardless of the account settings)</li>
+</ul>
+<p>'Auto-sync' is an Android-wide setting that controls accounts that link into the phone. Currently K-9 email accounts do 
+not function in this way. However setting this will make the app reflect the global auto-sync setting.</p>
+<p>The configuration of Android's Auto-sync setting may vary depending on your phone's Android version and device 
+manufacturer. On stock Android it's found under: "Settings -&gt; Users &amp; accounts -&gt; Automatically sync data"</p>
+<ul>
+<li><a href="https://support.google.com/nexus/answer/2840875?hl=en-GB">Google provide information about auto-sync and Nexus phones</a></li>
+<li><a href="https://www.samsung.com/hk_en/support/skp/faq/1075415">Samsung provide instructions for their S6 phones.</a></li>
+<li><a href="https://developer.android.com/reference/android/content/ContentResolver.html#getMasterSyncAutomatically()">On a technical level this is the result from <code>ContentResolver.getMasterSyncAutomatically()</code></a></li>
+</ul>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="use-gallery-bug-work-around">Use Gallery bug work-around</h3>
+<p>An old Android version shipped with a faulty Gallery app that didn't show any selectable items. To work around this 
+bug K-9 Mail adds the options "Add image" and "Add video" to the menu of the message composition screen when this 
+setting is enabled.</p>
+<p><strong>Note:</strong> This setting should be automatically enabled when the faulty Gallery version is found on your device. Most 
+users can ignore this setting and leave it unchecked.</p>
+<h3 id="save-attachments-to">Save attachments to...</h3>
+<p>Here you can specify a directory where your attachments are saved to when the "Save" button of an attachment is clicked.
+If a compatible file manager is installed 
+(e.g. <a href="https://play.google.com/store/apps/details?id=org.openintents.filemanager">OI File Manager</a>) you can simply 
+select a directory. Otherwise you'll have to type in its name.</p>
+<h2 id="privacy">Privacy</h2>
+<h3 id="hide-subject-in-notifications">Hide subject in notifications</h3>
+<p>This setting allows you to hide the subject of a message in notifications.</p>
+<p>Available options:</p>
+<ul>
+<li>Never (default)</li>
+<li>When device is locked</li>
+<li>Always</li>
+</ul>
+<p><strong>Note:</strong> Currently, any value other than <em>Never</em> disables rich notifications (on Android versions that support them). 
+This behavior will most likely change in the future to only disable the notification ticker that is visible from the 
+lock screen.</p>
+<h2 id="debugging">Debugging</h2>
+<h3 id="enable-debug-logging">Enable debug logging</h3>
+<p>Here you enable the logging of extra diagnostic information – e.g. if you're working with a developer to troubleshoot 
+a problem. See the page on <a href="../misc/debugging.html">logging errors</a> for more information.</p>
+<p>Remember to disable debug logging once it's no longer required.</p>
+<h3 id="log-sensitive-information">Log sensitive information</h3>
+<p>By default, sensitive information like passwords are not saved in the logs, but this option enables logging of 
+sensitive information.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="account.html" class="btn btn-neutral float-right" title="Account settings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="overview.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="account.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Managing / Viewing Accounts - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Managing / Viewing Accounts";
+    var mkdocs_page_input_path = "accounts/view.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="add.html">Adding an Account</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="view.html">Managing / Viewing Accounts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#unified-inbox">Unified Inbox</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#all-messages">All Messages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#regular-accounts">Regular Accounts</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#options">Options</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="provider_settings.html">Common Provider Settings</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/reading.html">Reading mail</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/global.html">Global settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/account.html">Account settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Accounts &raquo;</li>
+        
+      
+    
+    <li>Managing / Viewing Accounts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="view-accounts">View Accounts</h1>
+<p>The Accounts screen shows you a list of all the accounts you have configured in K-9, along with a number of special 
+folders.</p>
+<p><img alt="Accounts List" src="img/accounts_list.png" /></p>
+<h2 id="unified-inbox">Unified Inbox</h2>
+<p>The top entry is the unified inbox. Tapping on this will show you a combined list of the emails in all your accounts' 
+inboxes.</p>
+<h2 id="all-messages">All Messages</h2>
+<p>This entry provides a list of all messages in displayed folders.</p>
+<h2 id="regular-accounts">Regular Accounts</h2>
+<p>Each account is then shown.</p>
+<ul>
+<li>Tapping the account name, icon shows the inbox with all messages available</li>
+<li>Tapping the colored circle  / unread message count shows the inbox with only unread messages visible</li>
+<li>Tapping the folder icon shows the full list of folders</li>
+</ul>
+<h3 id="options">Options</h3>
+<p>Long-pressing on an account provides a list of options:</p>
+<ul>
+<li>Move up - This moves the account up in the account list</li>
+<li>Move down - This moves the account down in the account list</li>
+<li>Empty Trash - This empties the accounts' Trash folder</li>
+<li>Account settings - This provides a link to the accounts <a href="../settings/account.html">settings page</a></li>
+<li>Remove account - This deletes the account</li>
+<li>Clear messages - This deletes all the local messages</li>
+<li>Recreate data - This removes all the local emails, attachments and other data, but not the settings, meaning it is 
+recreated from the information on the server.</li>
+<li>Clear pending actions - This removes any pending actions - e.g. sending email, synchronizing read states, moving 
+emails between folders, etc.</li>
+<li>Export account settings - This exports the settings for debugging &amp; import into another copy of K-9.</li>
+</ul>
+<p>Note that the 'Remove account', 'Clear messages', 'Recreate data' and 'Clear pending actions' 
+can cause you to lose emails if they are only store on the device (common for POP e-mail). </p>
+<p>'Clear pending actions' can make the device out of sync with the server which could cause later confusion. 
+Occasionally 'Clear pending actions' is useful for handling certain bugs with the application - 
+but the developers would appreciate feedback (logs / steps to reproduce) in the case that this is necessary.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="remove.html" class="btn btn-neutral float-right" title="Removing Accounts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="incoming_webdav.html" class="btn btn-neutral" title="WebDAV (Exchange)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="incoming_webdav.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="remove.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

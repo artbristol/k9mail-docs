@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Common Provider Settings - K-9 Mail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Common Provider Settings";
+    var mkdocs_page_input_path = "accounts/provider_settings.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> K-9 Mail</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/welcome.html">Initial Set-up</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../setup/permissions.html">App permissions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Accounts</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="add.html">Adding an Account</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_imap.html">IMAP Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_pop3.html">POP3 Server Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="incoming_webdav.html">WebDAV (Exchange)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="view.html">Managing / Viewing Accounts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="remove.html">Removing Accounts</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="provider_settings.html">Common Provider Settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#aol-mail">AOL Mail</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imap">IMAP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pop">POP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gmail-google-mail">Gmail (Google Mail)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hotmail-msn-outlook-live">Hotmail / MSN / Outlook Live</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imap_1">IMAP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pop3">POP3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smtp">SMTP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#webde">Web.DE</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imap_2">IMAP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pop3_1">POP3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smtp_1">SMTP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#yahoo">Yahoo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imap_3">IMAP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smtp_2">SMTP</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Reading</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/reading.html">Reading mail</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../reading/notifications.html">Notifications</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sending</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sending/sending.html">Composing and Sending E-mail</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Settings</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/global.html">Global settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/account.html">Account settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folder.html">Folder settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/import_export.html">Import/Export settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../settings/folders.html">Configuring folders</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/ssl.html">SSL/TLS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/pgpmime.html">PGP/MIME</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/smime.html">S/MIME</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/widgets.html">Widgets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/debugging.html">Debugging</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">K-9 Mail</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Accounts &raquo;</li>
+        
+      
+    
+    <li>Common Provider Settings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="common-provider-settings">Common Provider Settings</h1>
+<p>This page provides common settings usable in K-9 for the major e-mail providers:</p>
+<h2 id="aol-mail">AOL Mail</h2>
+<p>AOL Mail supports both IMAP and POP. K-9 can use either (IMAP is recommended)</p>
+<h3 id="imap">IMAP</h3>
+<ul>
+<li><strong>IMAP Username</strong>: YourUsername@aol.com (or @love.com, @games.com, etc.)</li>
+<li><strong>Incoming Mail Server</strong>: imap.aol.com (Use port 143 for standard or 993 for SSL connections)</li>
+<li><strong>SMTP Outgoing Server Address</strong>: smtp.aol.com Set the port to 587</li>
+<li><strong>SMTP Username</strong>: YourUsername@aol.com (or @love.com, @games.com, etc.)</li>
+<li><strong>SMTP Password</strong>: password you use to login to Mail </li>
+</ul>
+<p>For a secure connection, check the SSL option for IMAP/POP and TLS for SMTP in your mail program.</p>
+<h3 id="pop">POP</h3>
+<ul>
+<li><strong>POP Username</strong>: YourUsername@aol.com (or @love.com, @games.com, etc.)</li>
+<li><strong>Incoming Mail Server</strong>: pop.aol.com (Use port 110 for standard or 995 for SSL connections)
+Remember to check the option to Leave messages on the server </li>
+<li><strong>SMTP Outgoing Server Address</strong>: smtp.aol.com Set the port to 587</li>
+<li><strong>SMTP Username</strong>: YourUsername@aol.com (or @love.com, @games.com, etc.)</li>
+<li><strong>SMTP Password</strong>: password you use to login to Mail </li>
+</ul>
+<h2 id="gmail-google-mail">Gmail (Google Mail)</h2>
+<p>Gmail supports IMAP. Note that Google also prefers a more secure authentication protocol called XOAuth 2.0 which is 
+currently not supported by K-9.</p>
+<p>To configure access to Gmail in K-9, just follow the steps below:</p>
+<ol>
+<li>Enable IMAP in your Gmail settings.<br />
+   If you have 2FA enabled for your Google account, visit <a href="https://myaccount.google.com/security#signin">https://myaccount.google.com/security#signin</a>.<br />
+   Click on "App Passwords" and generate a new password.
+   This is the password you will use for IMAP in lieu of your Gmail password.</li>
+<li>Open K-9 and set up a new account.</li>
+<li>Enter your full Gmail address and password, then select Next.</li>
+<li>On the next screen, you can give the account a nickname and choose the name to display on your outgoing messages. </li>
+<li>Tap Done.</li>
+</ol>
+<h2 id="hotmail-msn-outlook-live">Hotmail / MSN / Outlook Live</h2>
+<p>Hotmail supports IMAP, POP3 and Exchange ActiveSync.</p>
+<h3 id="imap_1">IMAP</h3>
+<ul>
+<li><strong>Server address</strong>: imap-mail.outlook.com</li>
+<li><strong>Port</strong>: 993</li>
+<li><strong>Encrypted Connection</strong>: SSL</li>
+<li><strong>User name</strong>: Your email address</li>
+<li><strong>Password</strong>: Your password</li>
+</ul>
+<h3 id="pop3">POP3</h3>
+<p>To use POP3 first enable it in your e-mail settings:</p>
+<ol>
+<li>Sign in to your Outlook.com account.</li>
+<li>Click the Options icon Options icon, and then click More mail settings or Options.</li>
+<li>Under Managing your account, click Connect devices and apps with POP.</li>
+<li>Under POP, select Enable.</li>
+<li>Click Save.</li>
+</ol>
+<p>Use these server settings with K-9 Mail:</p>
+<ul>
+<li><strong>Server address</strong>: pop-mail.outlook.com</li>
+<li><strong>Port</strong>: 995</li>
+<li><strong>Encrypted Connection</strong>: SSL</li>
+<li><strong>User name</strong>: Your email address</li>
+<li><strong>Password</strong>: Your password</li>
+</ul>
+<h3 id="smtp">SMTP</h3>
+<ul>
+<li><strong>Server address</strong>: smtp-mail.outlook.com</li>
+<li><strong>Port</strong>: 25 (or 587 if 25 is blocked)</li>
+<li><strong>Authentication</strong>: Yes</li>
+<li><strong>Encrypted Connection</strong>: TLS</li>
+<li><strong>User name</strong>: Your email address</li>
+<li><strong>Password</strong>: Your password</li>
+</ul>
+<h2 id="webde">Web.DE</h2>
+<p>Web.DE supports both IMAP and POP3.</p>
+<h3 id="imap_2">IMAP</h3>
+<ul>
+<li><strong>Server</strong>: imap.web.de</li>
+<li><strong>Port</strong>: 993</li>
+<li><strong>Verschlüsselung</strong>: SSL-Verschlüsselung</li>
+</ul>
+<h3 id="pop3_1">POP3</h3>
+<ul>
+<li><strong>Server</strong>: pop3.web.de</li>
+<li><strong>Port</strong>: 995</li>
+<li><strong>Verschlüsselung</strong>: SSL-Verschlüsselung</li>
+</ul>
+<h3 id="smtp_1">SMTP</h3>
+<ul>
+<li><strong>Server</strong>: smtp.web.de</li>
+<li><strong>Port</strong>: 587</li>
+<li><strong>Verschlüsselung</strong>: STARTTLS</li>
+</ul>
+<h2 id="yahoo">Yahoo</h2>
+<p>Yahoo supports IMAP only for fetching e-mail:</p>
+<h3 id="imap_3">IMAP</h3>
+<ul>
+<li><strong>IMAP Server</strong>: imap.mail.yahoo.com</li>
+<li><strong>Port</strong>: 993</li>
+<li><strong>Requires SSL</strong>: Yes</li>
+<li><strong>Email address</strong>: Your full email address (name@domain.com)</li>
+<li><strong>Password</strong>: Your account's password</li>
+</ul>
+<h3 id="smtp_2">SMTP</h3>
+<ul>
+<li><strong>Server</strong>: smtp.mail.yahoo.com</li>
+<li><strong>Port</strong>: 465 or 587</li>
+<li><strong>Requires SSL</strong>: Yes</li>
+<li><strong>Requires authentication</strong>: Yes</li>
+<li><strong>Same password as incoming</strong>: Yes</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../reading/reading.html" class="btn btn-neutral float-right" title="Reading mail">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="remove.html" class="btn btn-neutral" title="Removing Accounts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="remove.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reading/reading.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
