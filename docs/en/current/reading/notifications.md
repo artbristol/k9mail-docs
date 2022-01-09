@@ -1,10 +1,12 @@
 # Notifications
 
-Notifications are a key part of any communications tool and K-9 has, through it's development put considerable effort 
-into designing a notifications system that both accommodates users and and works as well as possible across a broad 
-range of devices.
+## (explanation of per-account settings)
 
-In this section, the use of notifications by K-9 is documented.
+## (global settings)
+
+(Quiet Time)
+
+(Lock Screen Notifications, contrast with android "show sensitive")
 
 ## New Mail Notifications
 
