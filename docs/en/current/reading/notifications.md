@@ -1,5 +1,14 @@
 # Notifications
 
+K-9 sends you notifications:
+
+* when you receive a new email
+* when it is performing a long-running activity (such as sending an email)
+* when it is connected to an IMAP server and waiting for a Push message
+* when an error occurs
+
+Notifications can be configured either globally, or per-account.
+
 ## (explanation of per-account settings)
 
 ## (global settings)
@@ -7,6 +16,10 @@
 (Quiet Time)
 
 (Lock Screen Notifications, contrast with android "show sensitive")
+
+## (IMAP Push/IDLE notification)
+
+Can be hidden in Android 8.0+
 
 ## New Mail Notifications
 
